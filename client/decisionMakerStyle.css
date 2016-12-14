@@ -1,0 +1,170 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a,table, caption, tbody, tfoot, thead, tr, th, td {background-color:#424c55;margin:0;padding:0;border:0;outline:0;font-size:16px;vertical-align:baseline;background:transparent;}
+:focus {outline:0;}
+html {height:100%;}
+body {  overflow:auto;
+        background-color: #424c55;
+        background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+        height:100%;
+        min-height:100%;
+        font-family: Verdana, Arial, sans-serif; 
+        font-size:1.1em;
+        color: #e7ecef;
+        line-height: 1;
+        width:100%; }
+        
+/*colors {
+    color: #424c55;
+    color: #2e86ab;
+    color: #084c61;
+    color: #a1d2ce;
+    color: #e7ecef;
+}*/
+
+#header { background-color: #084c61; min-height:6em; padding: 2em; }
+#container{text-align:center;}
+
+input {
+    font-size: 16px;
+    border-radius: 4px;   
+    border: none;
+    color: #e7ecef;
+    background-color: #676767;
+    border: none;
+    cursor: text;
+    padding: 15px 32px;
+    text-align: left; }
+
+/* Buttons */
+button { border: none; }
+button:active {
+    top: 1px;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    transform: translateY(2px);
+    opacity: 0.3;
+    background-color: #084c61; }
+
+.deleteOptionButton {
+    font-size: 1.4em;
+    width: 40px;
+    height: 40px; 
+    color: #a1d2ce;
+	background-color: #2e86ab;
+	-moz-border-radius: 40px;
+	-webkit-border-radius: 40px;
+	border-radius: 40px;
+    padding: 0;
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25); }
+    
+.deleteOptionButton:hover {
+    background-color: #1a4b60;
+}
+    
+.addOption {
+    margin-left:2em;
+    float: right;
+    padding: 0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    font-size: 1.1em;
+    -moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+    border-radius: 20px;  
+    border: none;
+    color: #084c61;
+    background-color: #a1d2ce;
+    border-bottom: #438b85;
+    cursor: pointer;
+    font-weight: bold;
+    -webkit-box-shadow: inset 0 -3px #438b85;
+    box-shadow: inset 0 -3px #438b85;
+    width: 40px;
+    height: 40px; }
+    
+.addOption:hover {
+    color: #084c61;
+    background-color: rgba(161, 210, 206, 0.5);
+}
+
+.selectedItem{
+    color: #a1d2ce;
+	background: #2e86ab;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+    vertical-align:middle;
+    text-align:center;
+    padding:0.5em 0.7em 0.6em 0.7em;
+    font-variant:small-caps;
+    font-weight: bold;
+    font-size: 1.5em;
+    -webkit-box-shadow: inset 0 -4px #346d70;
+    box-shadow: inset 0 -4px #346d70;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    margin-bottom: 0.5em; }
+
+button.bright{
+    padding: 15px 32px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    font-size: 16px;
+    border-radius: 4px;  
+    border: none;
+    color: #084c61;
+    background-color: #a1d2ce;
+    border-bottom: #438b85;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    -webkit-box-shadow: inset 0 -3px #438b85;
+    box-shadow: inset 0 -3px #438b85; }
+    
+button.bright:hover {
+    color: #084c61;
+    background-color: rgba(161, 210, 206, 0.5); }
+
+/* Animation selected option */
+.animate {
+     -webkit-animation: swing 1s ease-in-out;
+     animation: swing 1s ease-in-out; }
+     
+@-webkit-keyframes swing
+{ 15% { -webkit-transform: translateX(30px);
+        transform: translateX(30px);}
+  30% { -webkit-transform: translateX(0px);
+        transform: translateX(0px); } 
+  50% { -webkit-transform: translateX(15px);
+        transform: translateX(15px); }
+  65% { -webkit-transform: translateX(0px);
+        transform: translateX(0px); }
+  80% { -webkit-transform: translateX(7px);
+        transform: translateX(7px); }
+  100% { -webkit-transform: translateX(0);
+         transform: translateX(0); }
+}
+@keyframes swing
+{ 15% { -webkit-transform: translateX(30px);
+        transform: translateX(30px);}
+  30% { -webkit-transform: translateX(0px);
+        transform: translateX(0px); } 
+  50% { -webkit-transform: translateX(15px);
+        transform: translateX(15px); }
+  65% { -webkit-transform: translateX(0px);
+        transform: translateX(0px); }
+  80% { -webkit-transform: translateX(7px);
+        transform: translateX(7px); }
+  100% { -webkit-transform: translateX(0);
+         transform: translateX(0); }
+}
+
+/* Semantic UI hacks */
+.ui.ribbon.label { text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25); background-color: #2e86ab; color: #a1d2ce; align-content: center; font-size: 1.1em;}
+.ui.segments > .segment { align-self: left; text-align: left; }
+.ui.compact.segments { align-content: left;background-color: #424c55;text-align: left; }
+.ui.top.attached.label:first-child + *:not(.attached) { margin-top: 3.8rem !important; }
+div.ui.segment {
+    background-color: #424c55;
+    border: none;
+    box-shadow: none;
+}

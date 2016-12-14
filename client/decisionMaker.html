@@ -1,0 +1,67 @@
+<head>
+    <title>Make a Decision</title>
+</head>
+
+<body>
+    {{> newOption }} {{> deleteOption }}
+    <div id="header" class="ui stackable centered grid">
+        <div class="ui item">
+            <div class="selectedItem">{{selectedOption}} </div>
+            <Button class="makeDecision {{#if optionCount}}disabled{{/if}} bright">Decide</Button>
+        </div>
+    </div>
+    <div id="container">
+        <div class="ui compact segments">
+            <span class="ui top attached ribbon label">Available Options 
+            <Button class="addOption">+</Button></span>
+            <div class="ui compact segments">
+                {{#each options}} {{> optionTemplate}} {{/each}}
+            </div>
+        </div>
+    </div>
+</body>
+
+<template name="optionTemplate">
+    <div class="ui segment">
+        <Button id="{{_id}}" class="deleteOptionButton option circle">-</Button>
+        <span class="optionName"> {{name}} </span>
+    </div>
+</template>
+
+<template name="newOption">
+    <div class="ui small modal newOption">
+        <div class="header">Add Option</div>
+        <div class="content">
+            <div class="ui middle aligned grid">
+                <div class="row">
+                    <input type="text" autocomplete="off" name="addOption" placeholder="Add new option" />
+                </div>
+                <div class="row">
+                    <div class="actions right floated column">
+                        <div class="ui right floated approve button">OK</div>
+                        <div class="ui right floated cancel button">Cancel</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name="deleteOption">
+    <div class="ui small modal deleteOption">
+        <div class="header">Delete Option</div>
+        <div class="content">
+            <div class="ui middle aligned grid">
+                <div class="row">
+                    <div class="content">"You really want to delete the option?"</div>
+                </div>
+                <div class="row">
+                    <div class="actions right floated column">
+                        <div class="ui right floated approve button">OK</div>
+                        <div class="ui right floated cancel button">Cancel</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
